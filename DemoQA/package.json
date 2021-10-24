@@ -1,0 +1,12 @@
+{
+  "name": "DemoQA",
+  "version": "1.0.0",
+  "description": "Playwright automation testing",
+  "main": "index.js",
+  "repository": "https://github.com/Ibrian93/playwright-automation",
+  "author": "Brian Icochea",
+  "license": "MIT",
+  "dependencies": {
+    "playwright": "^1.16.1"
+  }
+}
