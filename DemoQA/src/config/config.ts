@@ -7,7 +7,7 @@ const config : PlaywrightTestConfig= {
     {
       name: 'Chrome',
       use: {
-        baseURL: 'https://demoqa.com/books',
+        baseURL: 'https://demoqa.com/',
         browserName: 'chromium',
         headless: false,
         actionTimeout: 0,
@@ -15,5 +15,6 @@ const config : PlaywrightTestConfig= {
     }
   ]
 }
+console.log(config.projects);
 
 export default config

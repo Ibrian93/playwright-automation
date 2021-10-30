@@ -8,7 +8,7 @@ export class HomePage extends BasePage {
     };
 
     async goToHomePage() {
-        await this.goto('');
+        await this.goto('/books');
     }
 
     async goToLoginPage() {
