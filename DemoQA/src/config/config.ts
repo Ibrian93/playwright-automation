@@ -15,6 +15,5 @@ const config : PlaywrightTestConfig= {
     }
   ]
 }
-console.log(config.projects);
 
 export default config

@@ -22,4 +22,8 @@ export class BasePage {
     public clickElement(element: string): Promise<any> {
         return this.page.click(element);
     }
+
+    public fillField(element: string, value: string): Promise<any> {
+        return this.page.fill(element, value);
+    }
 }
