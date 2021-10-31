@@ -1,5 +1,6 @@
 import { PageFactory } from '../src/pages/page.factory';
 import test  from './user.fixture';
+import { expect } from '@playwright/test';
 
 
 test.describe('User login in the DemoQA website', async () => {
@@ -11,5 +12,6 @@ test.describe('User login in the DemoQA website', async () => {
         const loginPage = pageObj.loginPage;
         await loginPage.fillLogin(user['username'], user['password']);
         await loginPage.loginUser();
+        expect(homePage.elements.userNameValue)
     })
 });
