@@ -5,7 +5,7 @@ export class LoginPage extends BasePage {
         return {
             userNameField: 'id=userName',
             passwordField: 'id=password',
-            login: 'text=Login',
+            login: 'id=login',
         }
     };
 

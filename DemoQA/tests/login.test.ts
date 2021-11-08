@@ -12,6 +12,7 @@ test.describe('User login in the DemoQA website', async () => {
         const loginPage = pageObj.loginPage;
         await loginPage.fillLogin(user['username'], user['password']);
         await loginPage.loginUser();
-        expect(homePage.elements.userNameValue)
+        await page.waitForSelector(homePage.elements.userNameValue);
+        expect(await homePage.getUsernameValue()).toBe('ibrian93');
     })
 });

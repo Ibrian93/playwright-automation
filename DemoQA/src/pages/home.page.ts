@@ -16,7 +16,7 @@ export class HomePage extends BasePage {
         await this.clickElement(this.elements.loginButton);
     }
 
-    async getUsernameValue() {
-        await this.page.textContent(this.elements.userNameValue);
+    public async getUsernameValue() {
+        return await this.page.textContent('#userName-value');
     }
 }
