@@ -2,6 +2,7 @@ import { Page } from '@playwright/test';
 
 export class HomePage {
   public get elements() {
+
     return {
       loginButton: 'text=Login',
       userNameValue: 'id=userName-value',
