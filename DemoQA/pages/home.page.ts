@@ -1,6 +1,6 @@
-import { BasePage } from "./base.page";
+import { Page } from "@playwright/test";
 
-export class HomePage extends BasePage {
+export class HomePage {
     public get elements() {
         return {
             loginButton: 'text=Login',
@@ -8,15 +8,21 @@ export class HomePage extends BasePage {
         }
     };
 
+    readonly page: Page;
+
+    constructor(page: Page) {
+        this.page = page;
+    }
+
     async goToHomePage() {
-        await this.goto('/books');
+        await this.page.goto('/books');
     }
 
     async goToLoginPage() {
-        await this.clickElement(this.elements.loginButton);
+        await this.page.click(this.elements.loginButton);
     }
 
     public async getUsernameValue() {
-        return await this.page.textContent('#userName-value');
+        return this.page.textContent('#userName-value');
     }
 }

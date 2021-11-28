@@ -1,15 +1,15 @@
-import { PageFactory } from '../pages/page.factory';
-import test  from './user.fixture';
+import { HomePage } from '../pages/home.page';
+import { LoginPage } from '../pages/login.page';
 import { expect } from '@playwright/test';
+import test  from './user.fixture';
 
 
 test.describe('User login in the DemoQA website', async () => {
     test('User login with correct credentials', async({page, context, user}) => {
-        const pageObj = new PageFactory(page, context);
-        const homePage = pageObj.homePage;
+        const homePage = new HomePage(page);
         await homePage.goToHomePage();
         await homePage.goToLoginPage();
-        const loginPage = pageObj.loginPage;
+        const loginPage = new LoginPage(page);
         await loginPage.fillLogin(user['username'], user['password']);
         await loginPage.loginUser();
         await page.waitForSelector(homePage.elements.userNameValue);

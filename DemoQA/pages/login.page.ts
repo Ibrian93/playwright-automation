@@ -1,6 +1,6 @@
-import { BasePage } from "./base.page";
+import { Page } from '@playwright/test';
 
-export class LoginPage extends BasePage {
+export class LoginPage {
     public get elements() {
         return {
             userNameField: 'id=userName',
@@ -9,12 +9,18 @@ export class LoginPage extends BasePage {
         }
     };
 
+    readonly page: Page;
+
+    constructor(page: Page) {
+        this.page = page;
+    }
+
     async fillLogin(username: string, password: string) {
-        await this.fillField(this.elements.userNameField, username);
-        await this.fillField(this.elements.passwordField, password);
+        await this.page.fill(this.elements.userNameField, username);
+        await this.page.fill(this.elements.passwordField, password);
     }
 
     async loginUser() {
-        await this.clickElement(this.elements.login);
+        await this.page.click(this.elements.login);
     }
 }

@@ -12,6 +12,15 @@ const config : PlaywrightTestConfig= {
         headless: true,
         actionTimeout: 0,
       }
+    },
+    {
+      name: 'Firefox',
+      use: {
+        baseURL: 'https://demoqa.com/',
+        browserName: 'firefox',
+        headless: true,
+        actionTimeout: 0,
+      }
     }
   ]
 }
