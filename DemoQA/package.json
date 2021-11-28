@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": "https://github.com/Ibrian93/playwright-automation",
   "scripts": {
-    "test": "playwright test --config=src/config/config.ts"
+    "test": "playwright test --config=config/config.ts"
   },
   "author": "Brian Icochea",
   "license": "MIT",

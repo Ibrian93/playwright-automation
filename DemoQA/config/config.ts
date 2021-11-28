@@ -2,7 +2,7 @@ import { PlaywrightTestConfig } from "@playwright/test"
 
 const config : PlaywrightTestConfig= {
   timeout: 30000,
-  testDir: '${pwd}/../../../tests/',
+  testDir: '${pwd}/../../tests/',
   projects: [
     {
       name: 'Chrome',

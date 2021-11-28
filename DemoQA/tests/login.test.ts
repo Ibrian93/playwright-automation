@@ -1,4 +1,4 @@
-import { PageFactory } from '../src/pages/page.factory';
+import { PageFactory } from '../pages/page.factory';
 import test  from './user.fixture';
 import { expect } from '@playwright/test';
 
