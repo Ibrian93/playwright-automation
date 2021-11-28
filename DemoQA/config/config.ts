@@ -1,6 +1,6 @@
-import { PlaywrightTestConfig } from "@playwright/test"
+import { PlaywrightTestConfig } from '@playwright/test';
 
-const config : PlaywrightTestConfig= {
+const config: PlaywrightTestConfig = {
   timeout: 30000,
   testDir: '${pwd}/../../tests/',
   projects: [
@@ -11,7 +11,7 @@ const config : PlaywrightTestConfig= {
         browserName: 'chromium',
         headless: true,
         actionTimeout: 0,
-      }
+      },
     },
     {
       name: 'Firefox',
@@ -20,9 +20,9 @@ const config : PlaywrightTestConfig= {
         browserName: 'firefox',
         headless: true,
         actionTimeout: 0,
-      }
-    }
-  ]
-}
+      },
+    },
+  ],
+};
 
-export default config
+export default config;
