@@ -5,6 +5,7 @@ export class HomePage {
     return {
       loginButton: 'text=Login',
       userNameValue: 'id=userName-value',
+      usernameAlertMissingInput: '.is-invalid'
     };
   }
 
@@ -24,5 +25,9 @@ export class HomePage {
 
   public async getUsernameValue() {
     return this.page.textContent('#userName-value');
+  }
+
+  async isUsernameMissing() {
+    return this.page.isVisible(this.elements.usernameAlertMissingInput);
   }
 }

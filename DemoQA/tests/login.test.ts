@@ -14,4 +14,14 @@ test.describe('User login in the DemoQA website', async () => {
     await page.waitForSelector(homePage.elements.userNameValue);
     expect(await homePage.getUsernameValue()).toBe('ibrian93');
   });
+
+  test('User login with empty username', async ({ page, user }) => {
+    const homePage = new HomePage(page);
+    await homePage.goToHomePage();
+    await homePage.goToLoginPage();
+    const loginPage = new LoginPage(page);
+    await loginPage.fillLogin('', user['password']);
+    await loginPage.loginUser();
+    expect(await homePage.isUsernameMissing()).toBe(true);
+  })
 });
