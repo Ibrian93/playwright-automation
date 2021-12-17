@@ -8,7 +8,7 @@ const config: PlaywrightTestConfig = {
       name: 'Chrome',
       use: {
         launchOptions: {
-          slowMo: 50,
+          slowMo: 125,
         },
         baseURL: 'https://demoqa.com/',
         browserName: 'chromium',
@@ -20,7 +20,7 @@ const config: PlaywrightTestConfig = {
       name: 'Firefox',
       use: {
         launchOptions: {
-          slowMo: 50,
+          slowMo: 125,
         },
         baseURL: 'https://demoqa.com/',
         browserName: 'firefox',
