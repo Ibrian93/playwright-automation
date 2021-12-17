@@ -24,6 +24,7 @@ export class HomePage {
   }
 
   public async getUsernameValue() {
+    await this.page.waitForSelector(this.elements.userNameValue);
     return this.page.textContent('#userName-value');
   }
 
