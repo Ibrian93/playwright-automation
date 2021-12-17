@@ -6,6 +6,7 @@ export class LoginPage {
       userNameField: 'id=userName',
       passwordField: 'id=password',
       login: 'id=login',
+      loginWarningMessage: 'text=Invalid username or password!'
     };
   }
 
@@ -22,5 +23,10 @@ export class LoginPage {
 
   async loginUser() {
     await this.page.click(this.elements.login);
+  }
+
+  async isUsernamePasswordWarningPresent() {
+    await this.page.waitForSelector(this.elements.loginWarningMessage);
+    return this.page.isVisible(this.elements.loginWarningMessage);
   }
 }

@@ -7,15 +7,21 @@ const config: PlaywrightTestConfig = {
     {
       name: 'Chrome',
       use: {
+        launchOptions: {
+          slowMo: 50,
+        },
         baseURL: 'https://demoqa.com/',
         browserName: 'chromium',
         headless: true,
-        actionTimeout: 0,
+        actionTimeout: 0
       },
     },
     {
       name: 'Firefox',
       use: {
+        launchOptions: {
+          slowMo: 50,
+        },
         baseURL: 'https://demoqa.com/',
         browserName: 'firefox',
         headless: true,

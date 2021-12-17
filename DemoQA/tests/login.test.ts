@@ -23,5 +23,15 @@ test.describe('User login in the DemoQA website', async () => {
     await loginPage.fillLogin('', user['password']);
     await loginPage.loginUser();
     expect(await homePage.isUsernameMissing()).toBe(true);
+  });
+
+  test('User login with invalid credentials, invalid password', async ({ page, user }) => {
+    const homePage = new HomePage(page);
+    await homePage.goToHomePage();
+    await homePage.goToLoginPage();
+    const loginPage = new LoginPage(page);
+    await loginPage.fillLogin(user['username'], 'Test83!');
+    await loginPage.loginUser();
+    expect(await loginPage.isUsernamePasswordWarningPresent()).toBe(true);
   })
 });
