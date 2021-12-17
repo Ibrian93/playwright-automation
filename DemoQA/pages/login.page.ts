@@ -6,7 +6,7 @@ export class LoginPage {
       userNameField: 'id=userName',
       passwordField: 'id=password',
       login: 'id=login',
-      loginWarningMessage: 'text=Invalid username or password!'
+      loginWarningMessage: 'text=Invalid username or password!',
     };
   }
 

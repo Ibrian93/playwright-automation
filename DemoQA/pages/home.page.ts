@@ -5,7 +5,7 @@ export class HomePage {
     return {
       loginButton: 'text=Login',
       userNameValue: 'id=userName-value',
-      usernameAlertMissingInput: '.is-invalid'
+      usernameAlertMissingInput: '.is-invalid',
     };
   }
 

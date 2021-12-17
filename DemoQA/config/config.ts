@@ -13,7 +13,7 @@ const config: PlaywrightTestConfig = {
         baseURL: 'https://demoqa.com/',
         browserName: 'chromium',
         headless: true,
-        actionTimeout: 0
+        actionTimeout: 0,
       },
     },
     {
