@@ -6,6 +6,7 @@ export class HomePage {
       loginButton: 'text=Login',
       userNameValue: 'id=userName-value',
       usernameAlertMissingInput: '.is-invalid',
+      homePageTitle: 'text=Book Store',
     };
   }
 
@@ -29,7 +30,7 @@ export class HomePage {
   }
 
   public async isBookByTitleAvailable(bookTitle: string) {
-    await this.page.waitForSelector(`text=${bookTitle}`);
+    await this.page.waitForSelector(this.elements.homePageTitle);
     return this.page.isVisible(`text=${bookTitle}`);
   }
 
