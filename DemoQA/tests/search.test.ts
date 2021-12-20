@@ -12,10 +12,10 @@ test.describe('User searches a book in the DemoQA website', async () => {
       );
     }
   });
-  
+
   test('User searches a non existing book', async ({ page }) => {
-      const homePage = new HomePage(page);
-      await homePage.goToHomePage();
-      expect(await homePage.isBookByTitleAvailable('Anna Karenina')).toBe(false);
-  })
+    const homePage = new HomePage(page);
+    await homePage.goToHomePage();
+    expect(await homePage.isBookByTitleAvailable('Anna Karenina')).toBe(false);
+  });
 });
