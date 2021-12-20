@@ -28,6 +28,11 @@ export class HomePage {
     return this.page.textContent('#userName-value');
   }
 
+  public async isBookByTitleAvailable(bookTitle: string) {
+    await this.page.waitForSelector(`text=${bookTitle}`);
+    return this.page.isVisible(`text=${bookTitle}`);
+  }
+
   async isUsernameMissing() {
     return this.page.isVisible(this.elements.usernameAlertMissingInput);
   }
