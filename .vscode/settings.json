@@ -1,5 +1,7 @@
 {
     "playwright.configs": [
-        "./config/config.ts"
-    ]
+        "./config/playwright.config.ts"
+    ],
+    "editor.fontSize": 15,
+    "prettier.configPath": "config/playwright.config.ts"
 }
