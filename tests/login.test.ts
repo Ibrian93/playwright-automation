@@ -1,7 +1,7 @@
 import { HomePage } from '../pages/home.page';
 import { LoginPage } from '../pages/login.page';
 import { expect } from '@playwright/test';
-import test from './user.fixture';
+import test from '../helpers/utils/user.fixture';
 
 test.describe('User login in the DemoQA website', async () => {
   test('User login with correct credentials', async ({ page, user }) => {

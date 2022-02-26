@@ -1,6 +1,6 @@
 import { HomePage } from '../pages/home.page';
 import { expect } from '@playwright/test';
-import test from './books.fixture';
+import test from '../helpers/utils/books.fixture';
 
 test.describe('User searches a book in the DemoQA website', async () => {
   test('User searches an existing book', async ({ page, books }) => {
