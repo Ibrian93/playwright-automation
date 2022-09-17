@@ -6,6 +6,7 @@
   "repository": "https://github.com/Ibrian93/playwright-automation",
   "scripts": {
     "test": "playwright test --config=config/playwright.config.ts",
+    "test:chrome": "playwright test --config=config/playwright.config.ts --project=Chrome",
     "prettier-format": "prettier --config .prettierrc.js '**/*.(ts|js)' --write",
     "lint": "eslint ."
   },
