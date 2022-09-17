@@ -1,3 +1,4 @@
 node_modules
 jenkins.war
+package-lock.json
 .DS_Store
