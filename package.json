@@ -8,7 +8,8 @@
     "test": "playwright test --config=config/playwright.config.ts",
     "test:chrome": "playwright test --config=config/playwright.config.ts --project=Chrome",
     "prettier-format": "prettier --config .prettierrc.js '**/*.(ts|js)' --write",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "jenkins-server": "java -jar jenkins.war --httpPort=8080 --enable-future-java"
   },
   "author": "Brian Icochea",
   "license": "MIT",
