@@ -23,3 +23,12 @@ After the dependencies have been updated, it is necessary to install the playwri
 
 And the last step to perform is to actually run the tests by executing the following command:
 > `yarn run test`
+
+
+
+## What it is covered?
+Here it will be described briefly the main functionalities that are covered:
+- Login 
+- Search books
+ 
+
